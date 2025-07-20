@@ -169,4 +169,3 @@ For collaborations, project discussions, or mentorship:
 <h2 align="center">
   Made with ❤️ by <b>Abhishek Pratap Singh</b>
 </h2>
-```
