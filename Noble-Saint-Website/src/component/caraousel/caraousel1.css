@@ -1,0 +1,106 @@
+/* Main Carousel Container */
+.custom-carousel {
+  display: flex;
+  margin-top: 3%;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  gap: 3rem;
+  perspective: 1000px; /* Add perspective for 3D effect */
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  max-width: 100%;
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Individual Carousel Card */
+.carousel-card {
+  background: #222;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 220px;
+  height: 220px;
+  text-align: center;
+  transition: 
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    box-shadow 0.5s ease;
+  transform: scale(0.9) rotateY(10deg);
+  opacity: 0.5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+/* Center (Active) Card */
+.carousel-card.active {
+  transform: scale(1.3) rotateY(0deg) translateZ(50px); /* Zoom and center */
+  opacity: 1;
+  background: linear-gradient(145deg, #2b2b2b, #1e1e1e);
+  box-shadow:
+    0 0 30px rgba(255, 215, 0, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.carousel-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.carousel-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #f9c846;
+}
+
+/* Responsive Styles */
+/* Mobile View (1 slide at a time) */
+@media (max-width: 768px) {
+  .custom-carousel {
+    flex-direction: row !important;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* Hide all cards by default */
+  .carousel-card {
+    display: none;
+    opacity: 1;      /* no transparency */
+    transform: none; /* reset any scale/rotation */
+    width: 90%;      /* almost full width */
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* Only show the active (center) card */
+  .carousel-card.active {
+    display: block;
+    transform: scale(1.1) translateZ(30px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4),
+                0 8px 20px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(145deg, #2b2b2b, #1e1e1e);
+  }
+}
+
+
+/* Desktop & Tablet View (3 slides at a time) */
+@media (min-width: 769px) {
+  .custom-carousel {
+    justify-content: center; /* Center the carousel */
+  }
+
+  .carousel-card {
+    width: 220px;
+    height: 220px;
+    transform: scale(0.9) rotateY(10deg); /* 3D effect */
+    opacity: 0.5;
+  }
+
+  .carousel-card.active {
+    transform: scale(1.3) rotateY(0deg) translateZ(50px); /* 3D effect */
+    opacity: 1;
+  }
+}

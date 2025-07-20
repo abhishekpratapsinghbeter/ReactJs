@@ -1,0 +1,76 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #121212;
+  padding: 2rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  background: #1e1e1e;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.contact-card:hover {
+  transform: rotateY(10deg) translateZ(30px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.contact-info,
+.map-container {
+  padding: 2rem;
+  color: #d6c16e;
+}
+
+.contact-info h2,
+.map-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.map-container iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .map-container {
+    padding: 1.5rem;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}

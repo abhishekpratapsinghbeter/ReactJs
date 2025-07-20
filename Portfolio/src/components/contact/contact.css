@@ -1,0 +1,109 @@
+.c{
+    height: 70vh;
+    position: relative;
+    display: flex;
+    padding-top: 10%;
+}
+
+
+.c-wrapper{
+    display: flex;
+}
+.c-left{
+    flex:1.5;
+    margin-left: 40px;
+}
+.c-right{
+    flex: 1;
+    
+}
+.c-bg{
+    width: 20px;
+    height:100%;
+    background-color: #59b256;
+    position: absolute;
+}
+
+.c-title{
+    margin-left: 55%;
+    font-size: 60;
+    width: 80%;
+}
+.c-info-items{
+    display: flex;
+    align-items: center;
+    margin: 50px 0px;
+    width: 70%;
+}
+.c-icons{
+    width: 50px;
+    height: 50x;
+}
+form{
+    margin-top: 60px ;
+    margin-left: 20px;
+              
+}
+input{
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 10px 0px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+textarea{
+    width: 90%;
+    margin: 10px 0px;
+    font-size: 14px;
+    padding-left: 10px;
+
+}
+a:link{
+    color:black;
+    text-decoration: none;
+    display: inline;
+}
+button{
+    border: none;
+    padding: 15px;
+    background-color: #59b256;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    width: 90px;
+    border-radius: 10%;
+}
+@media screen and (max-width:480px) {
+    .c-wrapper{
+        display: block;
+    }
+    .c-right{
+        width: 410px;
+        margin: 2%;
+    }
+    
+    input{
+        width: 126%;
+        height: 50px;
+        border: none;
+        border-bottom: 1px solid black;
+        margin: 10px 0px;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    
+.c-bg{
+    height:130%;
+    position: absolute;
+}
+textarea{
+    width: 126%;
+    margin: 10px 0px;
+    font-size: 14px;
+    padding-left: 10px;
+
+}
+    
+}

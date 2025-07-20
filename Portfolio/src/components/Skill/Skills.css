@@ -1,0 +1,44 @@
+.s{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 6%;
+}
+.s-title{
+    margin-left: 45%;
+    font-weight: bold;
+    font-size: larger;
+    align-items: center;
+}
+.s-outer{
+    height: 130px;
+    width: 130px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(0,0,0,0.15);
+    }
+.s-logo{
+    margin-left: 5%;
+}
+.b1{
+    border-radius: 30px;
+    margin: 5px;
+}
+.bk{
+    height:40px ;
+    width:  120px;
+}
+@media screen and (max-width:480px) {
+    .s-logo{
+        width: 510px;
+        margin: 2%;
+        margin-left: 27%;
+    }
+    .s-title{
+        margin-left: 53%;
+        font-weight: bold;
+        font-size: larger;
+        align-items: center;
+    }
+    
+}

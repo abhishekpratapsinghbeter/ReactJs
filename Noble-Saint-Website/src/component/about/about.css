@@ -1,0 +1,95 @@
+/* Global reset for box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Container with 3D effect */
+.nsf-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  border-radius: 20px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transform: perspective(1000px) rotateX(3deg);
+  transition: transform 0.4s ease;
+}
+
+/* Hover 3D rotation */
+.nsf-container:hover {
+  transform: perspective(1000px) rotateX(0deg) scale(1.01);
+}
+
+/* Logo section */
+.nsf-logo-wrapper {
+  flex: 1 1 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nsf-logo {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+  transform: scale(1.05);
+  animation: floatLogo 4s ease-in-out infinite, pulseGlow 2.5s ease-in-out infinite;
+}
+
+
+/* Text content */
+.nsf-content {
+  flex: 2 1 500px;
+  color: #d6c16e;
+  padding: 1rem;
+}
+
+.nsf-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f0e68c;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nsf-content p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f3f3f3;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nsf-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .nsf-content h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .nsf-content p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .nsf-logo {
+    max-width: 160px;
+  }
+}
